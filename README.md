@@ -1,4 +1,4 @@
-# h5p plugin for django
+# h5p module for django
 
 This project was developed from the github repository, https://github.com/DrClockwork/H5PP which has the documentation of integrating any Django Project with H5P.
 
