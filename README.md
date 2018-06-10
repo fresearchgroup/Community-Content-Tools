@@ -25,13 +25,7 @@ source venv/bin/activate
 4) Inside the virtual environment, install the following:
 
 ```
-pip install django==1.8  
-pip install Pillow  
-pip install requests   
-pip install djangorestframework==3.4  
-pip install markdown  
-pip install django-filter  
-pip install django-widget-tweaks
+pip install -r requirements.txt
 ```
 
 5) Install the H5P plugin in the virtual environment
