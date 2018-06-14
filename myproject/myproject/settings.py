@@ -121,3 +121,5 @@ H5P_SAVE = 30
 H5P_EXPORT = '/exports/'
 H5P_LANGUAGE = 'en'
 BASE_URL = 'http://localhost:8000' # Hostname of your server
+
+COLLAB_ROOT = 'http://localhost:7000/'

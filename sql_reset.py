@@ -10,7 +10,7 @@ cursor = db.cursor()
 
 cursor.execute("ALTER DATABASE `%s` CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci'" % dbname)
 
-sql = "SELECT DISTINCT(table_name) FROM information_schema.columns WHERE table_schema = '%s'" % dbname
+sql = "SELECT DISTINCT(table_name) FROM information_schema.columns WHERE table_schema = '%s' AND table_name LIKE 'h5p%%'" % dbname
 cursor.execute(sql)
 
 results = cursor.fetchall()
