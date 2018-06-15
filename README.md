@@ -45,9 +45,19 @@ sudo apt-get install libmysqlclient-dev
 python sql_reset.py
 ```
 
+7) Create a superuser
+```
+python manage.py createsuperuser
+```
+
 7) Run the server by going to the project's main directory  
 
 ```
-cd H5P/myproject
 python manage.py runserver  
 ```
+
+8) Go to ```https://h5p.org/sites/default/files/official-h5p-release-20170301.h5p``` and download the official h5p libraries.
+
+9) Go to ```http://localhost:8000/h5p/home``` and upload the libraries.
+
+
