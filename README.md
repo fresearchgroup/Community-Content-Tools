@@ -59,5 +59,3 @@ python manage.py runserver
 8) Go to ```https://h5p.org/sites/default/files/official-h5p-release-20170301.h5p``` and download the official h5p libraries.
 
 9) Go to ```http://localhost:8000/h5p/home``` and upload the libraries.
-
-
