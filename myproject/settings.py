@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY= 'myf0)*es+lr_3l0i5$4^)^fb&4rcf(m28zven+oxkd6!(6gr*6'
+SECRET_KEY= 's3cr3t'
 # SECRET_KEY = 'a3n80aws7&uf2vluusjg&m!11gu8)g85xze7z1=%s))w0n84-u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'widget_tweaks',
     'h5pp',
-    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,10 +81,10 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'collaboration',
+         'NAME': 'django',
          'USER': 'root',
          'PASSWORD': 'root',
-         'HOST': 'localhost',
+         'HOST': 'db',
          'PORT': '3306',
     },
 }

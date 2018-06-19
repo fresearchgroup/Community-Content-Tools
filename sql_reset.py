@@ -1,9 +1,9 @@
 import MySQLdb
 
-host = "localhost"
+host = "db"
 passwd = "root"
 user = "root"
-dbname = "collaboration"
+dbname = "django"
 
 db = MySQLdb.connect(host=host, user=user, passwd=passwd, db=dbname)
 cursor = db.cursor()
