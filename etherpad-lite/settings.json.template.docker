@@ -50,10 +50,10 @@
    "dbType" : "mysql",
    "dbSettings" : {
                     "user"    : "root",
-                    "host"    : "localhost",
+                    "host"    : "db",
                     "password": "root",
 		                "port"    : "3306",
-                    "database": "collaboration",
+                    "database": "django",
                     "charset" : "utf8mb4"
                   },
  
