@@ -60,9 +60,8 @@ python manage.py runserver
 
 9) Go to ```http://localhost:8000/h5p/home``` and upload the libraries.
 
-##Docker Installation
 
-DOCKER INSTALLATION --
+## DOCKER INSTALLATION --
 
  -- Install Docker and Docker-Compose from  --
 
@@ -71,10 +70,13 @@ DOCKER INSTALLATION --
 	    Docker Compose -- https://docs.docker.com/compose/install/
 
 1. Clone the repository --
-
-   git clone https://github.com/fresearchgroup/Collaboration-System.git
-
+```
+   	git clone https://github.com/fresearchgroup/Collaboration-System.git
+	git clone https://github.com/fresearchgroup/Community-Content-Tools.git
+```
 2. The run the following commands inside the repository --
+
+Note: Community-Content-Tools repository has been referred to as the H5P directory
 
 In the .env.docker of both CC and H5P,
 
