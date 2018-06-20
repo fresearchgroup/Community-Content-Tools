@@ -7,3 +7,4 @@ RUN pip install -r requirements.txt
 RUN apt-get install default-libmysqlclient-dev
 ADD . /code/
 RUN pip install H5PP-0.1.9.tar.gz
+RUN cp .env.docker .env
