@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from decouple import config, Csv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -119,6 +120,5 @@ H5P_URL = '/h5p/'
 H5P_SAVE = 30
 H5P_EXPORT = '/exports/'
 H5P_LANGUAGE = 'en'
-
-BASE_URL = config('H5P_ROOT') # Hostname of your server
+BASE_URL = config('H5P_ROOT')# Hostname of your server
 COLLAB_ROOT = config('COLLAB_ROOT')
