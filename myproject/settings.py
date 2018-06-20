@@ -20,13 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY= 's3cr3t'
+SECRET_KEY= config('SECRET_KEY')
 # SECRET_KEY = 'a3n80aws7&uf2vluusjg&m!11gu8)g85xze7z1=%s))w0n84-u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # Application definition
@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'django',
-         'USER': 'root',
-         'PASSWORD': 'root',
-         'HOST': 'db',
-         'PORT': '3306',
+         'NAME': config('DB_NAME'),
+         'USER': config('DB_USER'),
+         'PASSWORD': config('DB_PASSWORD'),
+         'HOST': config('DB_HOST'),
+         'PORT': config('DB_PORT'),
     },
 }
 
@@ -119,6 +119,6 @@ H5P_URL = '/h5p/'
 H5P_SAVE = 30
 H5P_EXPORT = '/exports/'
 H5P_LANGUAGE = 'en'
-BASE_URL = 'http://localhost:8000' # Hostname of your server
 
-COLLAB_ROOT = 'http://localhost:7000/'
+BASE_URL = config('H5P_ROOT') # Hostname of your server
+COLLAB_ROOT = config('COLLAB_ROOT')
