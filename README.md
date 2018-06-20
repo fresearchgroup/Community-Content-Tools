@@ -59,3 +59,51 @@ python manage.py runserver
 8) Go to ```https://h5p.org/sites/default/files/official-h5p-release-20170301.h5p``` and download the official h5p libraries.
 
 9) Go to ```http://localhost:8000/h5p/home``` and upload the libraries.
+
+##Docker Installation
+
+DOCKER INSTALLATION --
+
+ -- Install Docker and Docker-Compose from  --
+
+	    Docker - https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository
+
+	    Docker Compose -- https://docs.docker.com/compose/install/
+
+1. Clone the repository --
+
+   git clone https://github.com/fresearchgroup/Collaboration-System.git
+
+2. The run the following commands inside the repository --
+
+In the .env.docker of both CC and H5P,
+
+	replace 172.17.0.1 in COLLAB_ROOT and H5P with docker0 inet address
+	To find this, 
+	
+	$ ifconfig
+	
+	search for docker0 and copy inet address in place of 172.17.0.1
+
+In the H5P directory,
+```
+
+ sudo docker build -t h5p_image .
+ 
+```
+
+In the Collaboration-System directory,
+```
+
+ sudo docker-compose build
+
+ sudo docker-compose up db
+
+ sudo docker exec -i <db-container-image-name> mysql -u<username> -p<password> django < collab-updated.sql
+
+ sudo docker-compose up
+ 
+ ```
+ Go to `https://h5p.org/sites/default/files/official-h5p-release-20170301.h5p` and download the official h5p libraries.
+ 
+ Go to `http://yourdockerip:8000/h5p/libraries` and upload the downloaded libraries and select proceed.
