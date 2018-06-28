@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_settings_export.settings_export',
             ],
         },
     },
@@ -122,3 +123,7 @@ H5P_EXPORT = '/exports/'
 H5P_LANGUAGE = 'en'
 BASE_URL = config('H5P_ROOT')# Hostname of your server
 COLLAB_ROOT = config('COLLAB_ROOT')
+
+SETTINGS_EXPORT = [
+    'COLLAB_ROOT'
+]
