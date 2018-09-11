@@ -22,9 +22,15 @@ Tools for content creation
 		vi .env
 		
 	And assign the content you got from `APIKEY.txt` to variable `APIKEY=`
-7. Run the Python Server
-
-		python manage.py runserver
+7. Permission setting for implementing security in Etherpad : - 
+    
+    Open settings.json file in etherpad and set this fields -
+    
+		1. "requireSession" : true,
+		Users must have a session to access pads. This effectively allows only group pads to be accessed.
+		
+		2. "editOnly" : true,
+		Users may edit pads but not create new ones. Pad creation is only via the API. This applies both to group pads and regular pads.
 				
 ## Installing Etherpad Module Using Docker
 
