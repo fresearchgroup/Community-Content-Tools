@@ -7,7 +7,9 @@ Tools for content creation
 1. Install Collaboration Communities from https://github.com/fresearchgroup/Collaboration-System/
 2. Clone etherpad-lite from https://github.com/ether/etherpad-lite
 
-		git clone https://github.com/ether/etherpad-lite
+		wget https://github.com/ether/etherpad-lite/archive/1.7.0.tar.gz
+		tar -xvf 1.7.0.tar.gz
+		mv etherpad-lite-1.7.0/ etherpad-lite/
 
 3. Clone the current directory and place the contents of `etherpad-lite` folder in `etherpad-lite` root directory.
 4. Install Node JS from https://nodejs.org/
