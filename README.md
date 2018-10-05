@@ -11,18 +11,25 @@ Tools for content creation
 
 3. Clone the current directory and place the contents of `etherpad-lite` folder in `etherpad-lite` root directory.
 4. Install Node JS from https://nodejs.org/
-5. Run the following commands
+5. Install pm2 --
+	npm install pm2 -g 
+	
+   Modify bin/run.sh --
+   
+   exec pm2 start "$SCRIPTPATH/node_modules/ep_etherpad-lite/node/server.js" $*
+   
+6. Run the following commands
 	
 		./bin/run.sh
 
-6. Place the `APIKEY` in `.env` folder of `Collaboration-System`
+7. Place the `APIKEY` in `.env` folder of `Collaboration-System`
 
 		cat APIKEY.txt
 		cd path/to/collaboration-communities
 		vi .env
 		
 	And assign the content you got from `APIKEY.txt` to variable `APIKEY=`
-7. Permission setting for implementing security in Etherpad : - 
+8. Permission setting for implementing security in Etherpad : - 
     
     Open settings.json file in etherpad and set this fields -
     
