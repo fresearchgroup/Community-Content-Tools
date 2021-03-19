@@ -3,7 +3,7 @@ chardet==3.0.4
 Django==1.8
 django-filter==1.1.0
 django-widget-tweaks==1.4.2
-djangorestframework==3.4.0
+djangorestframework==3.11.2
 idna==2.6
 Markdown==2.6.11
 mysql==0.0.1
